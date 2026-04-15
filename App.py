@@ -4,7 +4,7 @@ from transformers import pipeline
 @st.cache_resource
 def load_summarizer():
   return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-summarizer = load_summarizer()
+  summarizer = load_summarizer()
 
 #streamlit UI
 st.title("EVO AI Text Summarizer")
@@ -21,4 +21,4 @@ if st.button("Summarize"):
       st.subheader("Summary:")
       st.success(summary[0]['summary_text'])
   else:
-    st.warning("Please enter some text to summarize.")
+    st.warning("Please enter some text to summarize."
